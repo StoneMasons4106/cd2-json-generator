@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Custom Difficulty 2 JSON Generator</title>
+        <!-- Load Favicon-->
+        <link href="assets/img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <!-- Load Material Icons from Google Fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet" />
+        <!-- Load Simple DataTables Stylesheet-->
+        <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
+        <!-- Roboto and Roboto Mono fonts from Google Fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,500" rel="stylesheet" />
+        <!-- Load main stylesheet-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body class="nav-fixed bg-light">
+            <!-- Layout content-->
+            <div id="layoutDrawer_content">
+                <!-- Main page content-->
+                <main>
+                    <!-- Main dashboard content-->
+                    <div class="container-xl p-5">
+                        <div class="row justify-content-between align-items-center mb-5">
+                            <div class="col flex-shrink-0 mb-5 mb-md-0">
+                                <h1 class="display-4 mb-0">Custom Difficulty 2 JSON Generator</h1>
+                                <div class="text-muted">Created by memtransmute &amp; StoneMasons</div>
+                            </div>
+                            <form class="mt-5" action="">
+                                <div class="tab">
+                                    <div class="row">
+                                        <div class="col">
+                                            <h5 class="mt-5">Basic Info:</h5>
+                                        </div>
+                                        <div class="col">
+                                            <!-- Scrollable modal example-->
+
+                                            <!-- Button that triggers the modal dialog-->
+                                            <button style="float: right; bottom: -36px;" class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#basicInfoModal">Tooltips<i class="trailing-icon material-icons">launch</i></button>
+
+                                            <!-- Modal-->
+                                            <div class="modal fade" id="basicInfoModal" tabindex="-1" aria-labelledby="basicInfoModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog modal-dialog-scrollable">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="basicInfoModalLabel">Basic Info</h5>
+                                                            <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <p>Name: Name of the Custom Difficulty. Other people will see this in your lobby, consider giving it a descriptive name.</p>
+                                                            <p>Description: Basic description of your Custom Difficulty.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <mwc-textfield class="w-100" id="name" label="Name" maxlength="254" charcounter required></mwc-textfield>
+                                    <mwc-textarea class="w-100 mt-1" id="description" label="Description" maxlength="2000" charcounter required></mwc-textarea>
+                                </div>
+                                <div class="tab">
+                                    <div class="row">
+                                        <div class="col">
+                                            <h5 class="mt-5">Enemy Caps:</h5>
+                                        </div>
+                                        <div class="col">
+                                            <!-- Scrollable modal example-->
+
+                                            <!-- Button that triggers the modal dialog-->
+                                            <button style="float: right; bottom: -36px;" class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#enemyCapsModal">Tooltips<i class="trailing-icon material-icons">launch</i></button>
+
+                                            <!-- Modal-->
+                                            <div class="modal fade" id="enemyCapsModal" tabindex="-1" aria-labelledby="enemyCapsModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog modal-dialog-scrollable">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="enemyCapsModalLabel">Enemy Caps</h5>
+                                                            <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <p>Max Active Critters: Critters determines the maximum number of non-hostile creatures that can exist at once. This will not scale with player count.</p>
+                                                            <p>Max Active Swarmers: Swarmers determines the maximum number of swarmer-sized enemies that can exist at once. This includes enemies such as Glyphid Swarmers, Naedocytes, and Shredders. If you want one consistent value, only use the 1 player scaling. If you use only up until the 2 or 3 player scaling, everything with 2+ and 3+ players will have the same scaling, respectively.</p>
+                                                            <p>Max Active Enemies: Enemies determines the maximum number of the rest of the enemies on the map that can exist at once. If it doesn't die in a pickaxe swing, it's likely in this pool. If you want one consistent value, only use the 1 player scaling. If you use only up until the 2 or 3 player scaling, everything with 2+ and 3+ players will have the same scaling, respectively.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <mwc-textfield type="number" class="w-100 mt-1" id="max-active-critters" label="Max Active Critters" maxlength="5" charcounter required></mwc-textfield>
+                                    <mwc-textfield type="number" class="w-100 mt-1" id="max-active-swarmers-1p" label="Max Active Swarmers - One Player Scaling" maxlength="5" charcounter required></mwc-textfield>
+                                    <mwc-textfield type="number" class="w-100 mt-1" id="max-active-swarmers-2p" label="Max Active Swarmers - Two Player Scaling" maxlength="5" charcounter></mwc-textfield>
+                                    <mwc-textfield type="number" class="w-100 mt-1" id="max-active-swarmers-3p" label="Max Active Swarmers - Three Player Scaling" maxlength="5" charcounter></mwc-textfield>
+                                    <mwc-textfield type="number" class="w-100 mt-1" id="max-active-swarmers-4p" label="Max Active Swarmers - Four Player Scaling" maxlength="5" charcounter></mwc-textfield>
+                                    <mwc-textfield type="number" class="w-100 mt-1" id="max-active-enemies-1p" label="Max Active Enemies - One Player Scaling" maxlength="5" charcounter required></mwc-textfield>
+                                    <mwc-textfield type="number" class="w-100 mt-1" id="max-active-enemies-2p" label="Max Active Enemies - Two Player Scaling" maxlength="5" charcounter></mwc-textfield>
+                                    <mwc-textfield type="number" class="w-100 mt-1" id="max-active-enemies-3p" label="Max Active Enemies - Three Player Scaling" maxlength="5" charcounter></mwc-textfield>
+                                    <mwc-textfield type="number" class="w-100 mt-1" id="max-active-enemies-4p" label="Max Active Enemies - Four Player Scaling" maxlength="5" charcounter></mwc-textfield>
+                                </div>
+                                <div class="tab">
+                                    <div class="row">
+                                        <div class="col">
+                                            <h5 class="mt-5">Resupply Cost:</h5>
+                                        </div>
+                                        <div class="col">
+                                            <!-- Scrollable modal example-->
+
+                                            <!-- Button that triggers the modal dialog-->
+                                            <button style="float: right; bottom: -36px;" class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#resupplyCostModal">Tooltips<i class="trailing-icon material-icons">launch</i></button>
+
+                                            <!-- Modal-->
+                                            <div class="modal fade" id="resupplyCostModal" tabindex="-1" aria-labelledby="resupplyCostModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog modal-dialog-scrollable">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="resupplyCostModalLabel">Resupply Cost</h5>
+                                                            <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <p>If you would like a static, uniform resupply cost, enter a value in the one player scaling and move on. If you would like to scale resupply cost by player count, enter values in the 2, 3, and 4 player spots respectively.</p>
+                                                            <p>If you would like to mutate your resupply cost, and take into account the number of resupplies called, select 'IfFloat' under the mutator dropdown. Then select 'ResuppliesCalled' in the 'Mutate By' dropdown. Then, enter the number of resupplies you'd like your condition to take effect on. In the 'Then' field, enter the cost when the number of resupplies you defined is met. Under the 'Else' field, enter the cost whenever the number of resupplies you defined is not met.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <mwc-select class="w-100 mt-1" label="Mutator" id="resupply-mutator">
+                                        <mwc-list-item value="None"></mwc-list-item>
+                                        <mwc-list-item value="IfFloat">IfFloat</mwc-list-item>
+                                    </mwc-select>
+                                    <mwc-textfield type="number" class="w-100 mt-3 vanilla-nitra-cost" id="resupply-cost-1p" label="Resupply Cost - One Player Scaling" maxlength="3" min="0" charcounter required></mwc-textfield>
+                                    <mwc-textfield type="number" class="w-100 mt-1 vanilla-nitra-cost" id="resupply-cost-2p" label="Resupply Cost - Two Player Scaling" maxlength="3" min="0" charcounter></mwc-textfield>
+                                    <mwc-textfield type="number" class="w-100 mt-1 vanilla-nitra-cost" id="resupply-cost-3p" label="Resupply Cost - Three Player Scaling" maxlength="3" min="0" charcounter></mwc-textfield>
+                                    <mwc-textfield type="number" class="w-100 mt-1 vanilla-nitra-cost" id="resupply-cost-4p" label="Resupply Cost - Four Player Scaling" maxlength="3" min="0" charcounter></mwc-textfield>
+                                    <mwc-select class="w-100 mt-1 mutated-nitra-cost" label="Mutate By" id="resupply-mutate-by" style="display: none;">
+                                        <mwc-list-item value="None"></mwc-list-item>
+                                        <mwc-list-item value="ResuppliesCalled">ResuppliesCalled</mwc-list-item>
+                                    </mwc-select>
+                                    <mwc-textfield type="number" class="w-100 mt-3 resupplies-called" id="conditional-resupply-number" label="Conditional Resupply Number" maxlength="2" min="0" charcounter></mwc-textfield>
+                                    <mwc-textfield type="number" class="w-100 mt-1 resupplies-called" id="conditional-resupply-cost-then" label="Then" maxlength="3" min="0" charcounter></mwc-textfield>
+                                    <mwc-textfield type="number" class="w-100 mt-1 resupplies-called" id="conditional-resupply-cost-else" label="Else" maxlength="3" min="0" charcounter></mwc-textfield>
+                                </div>
+                                <div class="tab">
+                                    <h5 class="mt-5">Difficulty Setting:</h5>
+                                    <mwc-textfield type="number" step=".01" min="0" class="w-100 mt-1" id="extra-large-enemy-damage-resistance-1p" label="Extra Large Enemy Damage Resistance - One Player Scaling" maxlength="5" charcounter required></mwc-textfield>
+                                    <mwc-textfield type="number" step=".01" min="0" class="w-100 mt-1" id="extra-large-enemy-damage-resistance-2p" label="Extra Large Enemy Damage Resistance - Two Player Scaling" maxlength="5" charcounter></mwc-textfield>
+                                    <mwc-textfield type="number" step=".01" min="0" class="w-100 mt-1" id="extra-large-enemy-damage-resistance-3p" label="Extra Large Enemy Damage Resistance - Three Player Scaling" maxlength="5" charcounter></mwc-textfield>
+                                    <mwc-textfield type="number" step=".01" min="0" class="w-100 mt-1" id="extra-large-enemy-damage-resistance-4p" label="Extra Large Enemy Damage Resistance - Four Player Scaling" maxlength="5" charcounter></mwc-textfield>
+                                    <mwc-textfield type="number" step=".01" min="0" class="w-100 mt-1" id="extra-large-enemy-damage-resistance-b-1p" label="Extra Large Enemy Damage Resistance B - One Player Scaling" maxlength="5" charcounter required></mwc-textfield>
+                                    <mwc-textfield type="number" step=".01" min="0" class="w-100 mt-1" id="extra-large-enemy-damage-resistance-b-2p" label="Extra Large Enemy Damage Resistance B - Two Player Scaling" maxlength="5" charcounter></mwc-textfield>
+                                    <mwc-textfield type="number" step=".01" min="0" class="w-100 mt-1" id="extra-large-enemy-damage-resistance-b-3p" label="Extra Large Enemy Damage Resistance B - Three Player Scaling" maxlength="5" charcounter></mwc-textfield>
+                                    <mwc-textfield type="number" step=".01" min="0" class="w-100 mt-1" id="extra-large-enemy-damage-resistance-b-4p" label="Extra Large Enemy Damage Resistance B - Four Player Scaling" maxlength="5" charcounter></mwc-textfield>
+                                    <mwc-textfield type="number" step=".01" min="0" class="w-100 mt-1" id="extra-large-enemy-damage-resistance-c-1p" label="Extra Large Enemy Damage Resistance C - One Player Scaling" maxlength="5" charcounter required></mwc-textfield>
+                                    <mwc-textfield type="number" step=".01" min="0" class="w-100 mt-1" id="extra-large-enemy-damage-resistance-c-2p" label="Extra Large Enemy Damage Resistance C - Two Player Scaling" maxlength="5" charcounter></mwc-textfield>
+                                    <mwc-textfield type="number" step=".01" min="0" class="w-100 mt-1" id="extra-large-enemy-damage-resistance-c-3p" label="Extra Large Enemy Damage Resistance C - Three Player Scaling" maxlength="5" charcounter></mwc-textfield>
+                                    <mwc-textfield type="number" step=".01" min="0" class="w-100 mt-1" id="extra-large-enemy-damage-resistance-c-4p" label="Extra Large Enemy Damage Resistance C - Four Player Scaling" maxlength="5" charcounter></mwc-textfield>
+                                    <mwc-textfield type="number" step=".01" min="0" class="w-100 mt-1" id="extra-large-enemy-damage-resistance-d-1p" label="Extra Large Enemy Damage Resistance D - One Player Scaling" maxlength="5" charcounter required></mwc-textfield>
+                                    <mwc-textfield type="number" step=".01" min="0" class="w-100 mt-1" id="extra-large-enemy-damage-resistance-d-2p" label="Extra Large Enemy Damage Resistance D - Two Player Scaling" maxlength="5" charcounter></mwc-textfield>
+                                    <mwc-textfield type="number" step=".01" min="0" class="w-100 mt-1" id="extra-large-enemy-damage-resistance-d-3p" label="Extra Large Enemy Damage Resistance D - Three Player Scaling" maxlength="5" charcounter></mwc-textfield>
+                                    <mwc-textfield type="number" step=".01" min="0" class="w-100 mt-1" id="extra-large-enemy-damage-resistance-d-4p" label="Extra Large Enemy Damage Resistance D - Four Player Scaling" maxlength="5" charcounter></mwc-textfield>
+                                    <mwc-textfield type="number" step=".01" min="0" class="w-100 mt-1" id="enemy-damage-resistance-1p" label="Enemy Damage Resistance - One Player Scaling" maxlength="5" charcounter required></mwc-textfield>
+                                    <mwc-textfield type="number" step=".01" min="0" class="w-100 mt-1" id="enemy-damage-resistance-2p" label="Enemy Damage Resistance - Two Player Scaling" maxlength="5" charcounter></mwc-textfield>
+                                    <mwc-textfield type="number" step=".01" min="0" class="w-100 mt-1" id="enemy-damage-resistance-3p" label="Enemy Damage Resistance - Three Player Scaling" maxlength="5" charcounter></mwc-textfield>
+                                    <mwc-textfield type="number" step=".01" min="0" class="w-100 mt-1" id="enemy-damage-resistance-4p" label="Enemy Damage Resistance - Four Player Scaling" maxlength="5" charcounter></mwc-textfield>
+                                    <mwc-textfield type="number" step=".01" min="0" class="w-100 mt-1" id="small-enemy-damage-resistance-1p" label="Small Enemy Damage Resistance - One Player Scaling" maxlength="5" charcounter required></mwc-textfield>
+                                    <mwc-textfield type="number" step=".01" min="0" class="w-100 mt-1" id="small-enemy-damage-resistance-2p" label="Small Enemy Damage Resistance - Two Player Scaling" maxlength="5" charcounter></mwc-textfield>
+                                    <mwc-textfield type="number" step=".01" min="0" class="w-100 mt-1" id="small-enemy-damage-resistance-3p" label="Small Enemy Damage Resistance - Three Player Scaling" maxlength="5" charcounter></mwc-textfield>
+                                    <mwc-textfield type="number" step=".01" min="0" class="w-100 mt-1" id="small-enemy-damage-resistance-4p" label="Small Enemy Damage Resistance - Four Player Scaling" maxlength="5" charcounter></mwc-textfield>
+                                    <mwc-textfield type="number" step=".01" min="0" class="w-100 mt-1" id="enemy-damage-modifier-1p" label="Enemy Damage Modifier - One Player Scaling" maxlength="5" charcounter required></mwc-textfield>
+                                    <mwc-textfield type="number" step=".01" min="0" class="w-100 mt-1" id="enemy-damage-modifier-2p" label="Enemy Damage Modifier - Two Player Scaling" maxlength="5" charcounter></mwc-textfield>
+                                    <mwc-textfield type="number" step=".01" min="0" class="w-100 mt-1" id="enemy-damage-modifier-3p" label="Enemy Damage Modifier - Three Player Scaling" maxlength="5" charcounter></mwc-textfield>
+                                    <mwc-textfield type="number" step=".01" min="0" class="w-100 mt-1" id="enemy-damage-modifier-4p" label="Enemy Damage Modifier - Four Player Scaling" maxlength="5" charcounter></mwc-textfield>
+                                </div>
+                                <div style="overflow:auto; margin-top: 30px;">
+                                    <div style="float:right;">
+                                        <button type="button" class="btn btn-secondary" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+                                        <button type="button" class="btn btn-primary" id="nextBtn" onclick="nextPrev(1)">Next</button>
+                                    </div>
+                                </div>
+                                <div style="text-align:center;margin-top:40px;">
+                                    <span class="step"></span>
+                                    <span class="step"></span>
+                                    <span class="step"></span>
+                                    <span class="step"></span>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </main>
+                <!-- Footer-->
+                <!-- Min-height is set inline to match the height of the drawer footer-->
+                <footer class="py-4 mt-auto border-top" style="min-height: 74px">
+                    <div class="container-xl px-5">
+                        <div class="d-flex flex-column flex-sm-row align-items-center justify-content-sm-between small">
+                            <div class="me-sm-2">Copyright &copy; Mem & Mason Productions 2024</div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <!-- Load Bootstrap JS bundle-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <!-- Load global scripts-->
+        <script type="module" src="js/material.js"></script>
+        <script src="js/scripts.js"></script>
+        <!--  Load Chart.js via CDN-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.0.2/chart.min.js" crossorigin="anonymous"></script>
+        <!--  Load Chart.js customized defaults-->
+        <script src="js/charts/chart-defaults.js"></script>
+        <!-- Load Simple DataTables Scripts-->
+        <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
+        <script src="js/datatables/datatables-simple-demo.js"></script>
+        <!-- Form Pagination -->
+        <script src="js/formPagination.js"></script>
+        <!-- Mutators JS -->
+        <script src="js/resupplyMutators.js"></script>
+    </body>
+</html>
