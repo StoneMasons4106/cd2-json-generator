@@ -246,6 +246,47 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div class="tab" id="stationary-difficulty-tab">
+                                    <div class="row">
+                                        <div class="col">
+                                            <h5 class="mt-5">Stationary Difficulty:</h5>
+                                        </div>
+                                        <div class="col">
+                                            <!-- Scrollable modal example-->
+
+                                            <!-- Button that triggers the modal dialog-->
+                                            <button style="float: right; bottom: -36px;" class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#stationaryDifficultyModal">Tooltips<i class="trailing-icon material-icons">launch</i></button>
+
+                                            <!-- Modal-->
+                                            <div class="modal fade" id="stationaryDifficultyModal" tabindex="-1" aria-labelledby="stationaryDifficultyModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog modal-dialog-scrollable">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="stationaryDifficultyModalLabel">Stationary Difficulty</h5>
+                                                            <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <p>This field determines how many stationary enemies will spawn. These spawns are: Spitballers, Brood Nexii, Breeders and Cave Leeches. These spawns may or may not include Rival Turrets on Industrial Sabotage. These spawns DO NOT include special event enemies such as Crassus Detonators, Huuli Hoarders, or Prospectors. These spawns will spawn un-aggroed, meaning a player will have to approach them or fire at them before they will attempt to attack. (This does include Breeders and Nexii; they will not attempt to spawn their minion enemies before being aggroed.)</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <button class="btn btn-danger" id="remove-stationary-difficulty-bin" type="button" style="float: right; bottom: -36px; margin-right: 4px;">Remove Bin</button>
+                                            <button class="btn btn-success" id="add-stationary-difficulty-bin" type="button" style="float:right; bottom: -36px; margin-right: 4px;">Add Bin</button>
+                                        </div>
+                                    </div>
+                                    <div class="row stationary-difficulty-bin-row">
+                                        <div class="col-4">
+                                            <mwc-textfield type="number" step=".01" min="0" max="1" class="w-100 mt-1" id="stationary-difficulty-weight-bin-1" label="Weight" maxlength="4" charcounter required></mwc-textfield>
+                                        </div>
+                                        <div class="col-4">
+                                            <mwc-textfield type="number" min="0" max="9999" class="w-100 mt-1" id="stationary-difficulty-min-bin-1" label="Min" maxlength="4" charcounter required></mwc-textfield>
+                                        </div>
+                                        <div class="col-4">
+                                            <mwc-textfield type="number" min="0" max="9999" class="w-100 mt-1" id="stationary-difficulty-max-bin-1" label="Max" maxlength="4" charcounter required></mwc-textfield>
+                                        </div>
+                                    </div>
+                                </div>
                                 <div style="overflow:auto; margin-top: 30px;">
                                     <div style="float:right;">
                                         <button type="button" class="btn btn-secondary" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
@@ -253,6 +294,7 @@
                                     </div>
                                 </div>
                                 <div style="text-align:center;margin-top:40px;">
+                                    <span class="step"></span>
                                     <span class="step"></span>
                                     <span class="step"></span>
                                     <span class="step"></span>
@@ -292,5 +334,7 @@
         <script src="js/resupplyMutators.js"></script>
         <!-- Encounter Difficulty JS -->
         <script src="js/encounterDifficulty.js"></script>
+        <!-- Stationary Difficulty JS -->
+        <script src="js/stationaryDifficulty.js"></script>
     </body>
 </html>
