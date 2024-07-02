@@ -92,15 +92,15 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <mwc-textfield type="number" class="w-100 mt-1" id="max-active-critters" label="Max Active Critters" maxlength="5" charcounter required></mwc-textfield>
-                                    <mwc-textfield type="number" class="w-100 mt-1" id="max-active-swarmers-1p" label="Max Active Swarmers - One Player Scaling" maxlength="5" charcounter required></mwc-textfield>
-                                    <mwc-textfield type="number" class="w-100 mt-1" id="max-active-swarmers-2p" label="Max Active Swarmers - Two Player Scaling" maxlength="5" charcounter></mwc-textfield>
-                                    <mwc-textfield type="number" class="w-100 mt-1" id="max-active-swarmers-3p" label="Max Active Swarmers - Three Player Scaling" maxlength="5" charcounter></mwc-textfield>
-                                    <mwc-textfield type="number" class="w-100 mt-1" id="max-active-swarmers-4p" label="Max Active Swarmers - Four Player Scaling" maxlength="5" charcounter></mwc-textfield>
-                                    <mwc-textfield type="number" class="w-100 mt-1" id="max-active-enemies-1p" label="Max Active Enemies - One Player Scaling" maxlength="5" charcounter required></mwc-textfield>
-                                    <mwc-textfield type="number" class="w-100 mt-1" id="max-active-enemies-2p" label="Max Active Enemies - Two Player Scaling" maxlength="5" charcounter></mwc-textfield>
-                                    <mwc-textfield type="number" class="w-100 mt-1" id="max-active-enemies-3p" label="Max Active Enemies - Three Player Scaling" maxlength="5" charcounter></mwc-textfield>
-                                    <mwc-textfield type="number" class="w-100 mt-1" id="max-active-enemies-4p" label="Max Active Enemies - Four Player Scaling" maxlength="5" charcounter></mwc-textfield>
+                                    <mwc-textfield type="number" class="w-100 mt-1" id="max-active-critters" label="Max Active Critters" maxlength="5" min="0" max="99999" charcounter required></mwc-textfield>
+                                    <mwc-textfield type="number" class="w-100 mt-1" id="max-active-swarmers-1p" label="Max Active Swarmers - One Player Scaling" maxlength="5" min="0" max="99999" charcounter required></mwc-textfield>
+                                    <mwc-textfield type="number" class="w-100 mt-1" id="max-active-swarmers-2p" label="Max Active Swarmers - Two Player Scaling" maxlength="5" min="0" max="99999" charcounter></mwc-textfield>
+                                    <mwc-textfield type="number" class="w-100 mt-1" id="max-active-swarmers-3p" label="Max Active Swarmers - Three Player Scaling" maxlength="5" min="0" max="99999" charcounter></mwc-textfield>
+                                    <mwc-textfield type="number" class="w-100 mt-1" id="max-active-swarmers-4p" label="Max Active Swarmers - Four Player Scaling" maxlength="5" min="0" max="99999" charcounter></mwc-textfield>
+                                    <mwc-textfield type="number" class="w-100 mt-1" id="max-active-enemies-1p" label="Max Active Enemies - One Player Scaling" maxlength="5" min="0" max="99999" charcounter required></mwc-textfield>
+                                    <mwc-textfield type="number" class="w-100 mt-1" id="max-active-enemies-2p" label="Max Active Enemies - Two Player Scaling" maxlength="5" min="0" max="99999" charcounter></mwc-textfield>
+                                    <mwc-textfield type="number" class="w-100 mt-1" id="max-active-enemies-3p" label="Max Active Enemies - Three Player Scaling" maxlength="5" min="0" max="99999" charcounter></mwc-textfield>
+                                    <mwc-textfield type="number" class="w-100 mt-1" id="max-active-enemies-4p" label="Max Active Enemies - Four Player Scaling" maxlength="5" min="0" max="99999" charcounter></mwc-textfield>
                                 </div>
                                 <div class="tab">
                                     <div class="row">
@@ -134,48 +134,117 @@
                                         <mwc-list-item value="None"></mwc-list-item>
                                         <mwc-list-item value="IfFloat">IfFloat</mwc-list-item>
                                     </mwc-select>
-                                    <mwc-textfield type="number" class="w-100 mt-3 vanilla-nitra-cost" id="resupply-cost-1p" label="Resupply Cost - One Player Scaling" maxlength="3" min="0" charcounter required></mwc-textfield>
-                                    <mwc-textfield type="number" class="w-100 mt-1 vanilla-nitra-cost" id="resupply-cost-2p" label="Resupply Cost - Two Player Scaling" maxlength="3" min="0" charcounter></mwc-textfield>
-                                    <mwc-textfield type="number" class="w-100 mt-1 vanilla-nitra-cost" id="resupply-cost-3p" label="Resupply Cost - Three Player Scaling" maxlength="3" min="0" charcounter></mwc-textfield>
-                                    <mwc-textfield type="number" class="w-100 mt-1 vanilla-nitra-cost" id="resupply-cost-4p" label="Resupply Cost - Four Player Scaling" maxlength="3" min="0" charcounter></mwc-textfield>
+                                    <mwc-textfield type="number" class="w-100 mt-3 vanilla-nitra-cost" id="resupply-cost-1p" label="Resupply Cost - One Player Scaling" maxlength="3" min="0" max="999" charcounter required></mwc-textfield>
+                                    <mwc-textfield type="number" class="w-100 mt-1 vanilla-nitra-cost" id="resupply-cost-2p" label="Resupply Cost - Two Player Scaling" maxlength="3" min="0" max="999" charcounter></mwc-textfield>
+                                    <mwc-textfield type="number" class="w-100 mt-1 vanilla-nitra-cost" id="resupply-cost-3p" label="Resupply Cost - Three Player Scaling" maxlength="3" min="0" max="999" charcounter></mwc-textfield>
+                                    <mwc-textfield type="number" class="w-100 mt-1 vanilla-nitra-cost" id="resupply-cost-4p" label="Resupply Cost - Four Player Scaling" maxlength="3" min="0" max="999" charcounter></mwc-textfield>
                                     <mwc-select class="w-100 mt-1 mutated-nitra-cost" label="Mutate By" id="resupply-mutate-by" style="display: none;">
                                         <mwc-list-item value="None"></mwc-list-item>
                                         <mwc-list-item value="ResuppliesCalled">ResuppliesCalled</mwc-list-item>
                                     </mwc-select>
-                                    <mwc-textfield type="number" class="w-100 mt-3 resupplies-called" id="conditional-resupply-number" label="Conditional Resupply Number" maxlength="2" min="0" charcounter></mwc-textfield>
-                                    <mwc-textfield type="number" class="w-100 mt-1 resupplies-called" id="conditional-resupply-cost-then" label="Then" maxlength="3" min="0" charcounter></mwc-textfield>
-                                    <mwc-textfield type="number" class="w-100 mt-1 resupplies-called" id="conditional-resupply-cost-else" label="Else" maxlength="3" min="0" charcounter></mwc-textfield>
+                                    <mwc-textfield type="number" class="w-100 mt-3 resupplies-called" id="conditional-resupply-number" label="Conditional Resupply Number" maxlength="2" min="0" max="99" charcounter></mwc-textfield>
+                                    <mwc-textfield type="number" class="w-100 mt-1 resupplies-called" id="conditional-resupply-cost-then" label="Then" maxlength="3" min="0" max="999" charcounter></mwc-textfield>
+                                    <mwc-textfield type="number" class="w-100 mt-1 resupplies-called" id="conditional-resupply-cost-else" label="Else" maxlength="3" min="0" max="999" charcounter></mwc-textfield>
                                 </div>
                                 <div class="tab">
-                                    <h5 class="mt-5">Difficulty Setting:</h5>
-                                    <mwc-textfield type="number" step=".01" min="0" class="w-100 mt-1" id="extra-large-enemy-damage-resistance-1p" label="Extra Large Enemy Damage Resistance - One Player Scaling" maxlength="5" charcounter required></mwc-textfield>
-                                    <mwc-textfield type="number" step=".01" min="0" class="w-100 mt-1" id="extra-large-enemy-damage-resistance-2p" label="Extra Large Enemy Damage Resistance - Two Player Scaling" maxlength="5" charcounter></mwc-textfield>
-                                    <mwc-textfield type="number" step=".01" min="0" class="w-100 mt-1" id="extra-large-enemy-damage-resistance-3p" label="Extra Large Enemy Damage Resistance - Three Player Scaling" maxlength="5" charcounter></mwc-textfield>
-                                    <mwc-textfield type="number" step=".01" min="0" class="w-100 mt-1" id="extra-large-enemy-damage-resistance-4p" label="Extra Large Enemy Damage Resistance - Four Player Scaling" maxlength="5" charcounter></mwc-textfield>
-                                    <mwc-textfield type="number" step=".01" min="0" class="w-100 mt-1" id="extra-large-enemy-damage-resistance-b-1p" label="Extra Large Enemy Damage Resistance B - One Player Scaling" maxlength="5" charcounter required></mwc-textfield>
-                                    <mwc-textfield type="number" step=".01" min="0" class="w-100 mt-1" id="extra-large-enemy-damage-resistance-b-2p" label="Extra Large Enemy Damage Resistance B - Two Player Scaling" maxlength="5" charcounter></mwc-textfield>
-                                    <mwc-textfield type="number" step=".01" min="0" class="w-100 mt-1" id="extra-large-enemy-damage-resistance-b-3p" label="Extra Large Enemy Damage Resistance B - Three Player Scaling" maxlength="5" charcounter></mwc-textfield>
-                                    <mwc-textfield type="number" step=".01" min="0" class="w-100 mt-1" id="extra-large-enemy-damage-resistance-b-4p" label="Extra Large Enemy Damage Resistance B - Four Player Scaling" maxlength="5" charcounter></mwc-textfield>
-                                    <mwc-textfield type="number" step=".01" min="0" class="w-100 mt-1" id="extra-large-enemy-damage-resistance-c-1p" label="Extra Large Enemy Damage Resistance C - One Player Scaling" maxlength="5" charcounter required></mwc-textfield>
-                                    <mwc-textfield type="number" step=".01" min="0" class="w-100 mt-1" id="extra-large-enemy-damage-resistance-c-2p" label="Extra Large Enemy Damage Resistance C - Two Player Scaling" maxlength="5" charcounter></mwc-textfield>
-                                    <mwc-textfield type="number" step=".01" min="0" class="w-100 mt-1" id="extra-large-enemy-damage-resistance-c-3p" label="Extra Large Enemy Damage Resistance C - Three Player Scaling" maxlength="5" charcounter></mwc-textfield>
-                                    <mwc-textfield type="number" step=".01" min="0" class="w-100 mt-1" id="extra-large-enemy-damage-resistance-c-4p" label="Extra Large Enemy Damage Resistance C - Four Player Scaling" maxlength="5" charcounter></mwc-textfield>
-                                    <mwc-textfield type="number" step=".01" min="0" class="w-100 mt-1" id="extra-large-enemy-damage-resistance-d-1p" label="Extra Large Enemy Damage Resistance D - One Player Scaling" maxlength="5" charcounter required></mwc-textfield>
-                                    <mwc-textfield type="number" step=".01" min="0" class="w-100 mt-1" id="extra-large-enemy-damage-resistance-d-2p" label="Extra Large Enemy Damage Resistance D - Two Player Scaling" maxlength="5" charcounter></mwc-textfield>
-                                    <mwc-textfield type="number" step=".01" min="0" class="w-100 mt-1" id="extra-large-enemy-damage-resistance-d-3p" label="Extra Large Enemy Damage Resistance D - Three Player Scaling" maxlength="5" charcounter></mwc-textfield>
-                                    <mwc-textfield type="number" step=".01" min="0" class="w-100 mt-1" id="extra-large-enemy-damage-resistance-d-4p" label="Extra Large Enemy Damage Resistance D - Four Player Scaling" maxlength="5" charcounter></mwc-textfield>
-                                    <mwc-textfield type="number" step=".01" min="0" class="w-100 mt-1" id="enemy-damage-resistance-1p" label="Enemy Damage Resistance - One Player Scaling" maxlength="5" charcounter required></mwc-textfield>
-                                    <mwc-textfield type="number" step=".01" min="0" class="w-100 mt-1" id="enemy-damage-resistance-2p" label="Enemy Damage Resistance - Two Player Scaling" maxlength="5" charcounter></mwc-textfield>
-                                    <mwc-textfield type="number" step=".01" min="0" class="w-100 mt-1" id="enemy-damage-resistance-3p" label="Enemy Damage Resistance - Three Player Scaling" maxlength="5" charcounter></mwc-textfield>
-                                    <mwc-textfield type="number" step=".01" min="0" class="w-100 mt-1" id="enemy-damage-resistance-4p" label="Enemy Damage Resistance - Four Player Scaling" maxlength="5" charcounter></mwc-textfield>
-                                    <mwc-textfield type="number" step=".01" min="0" class="w-100 mt-1" id="small-enemy-damage-resistance-1p" label="Small Enemy Damage Resistance - One Player Scaling" maxlength="5" charcounter required></mwc-textfield>
-                                    <mwc-textfield type="number" step=".01" min="0" class="w-100 mt-1" id="small-enemy-damage-resistance-2p" label="Small Enemy Damage Resistance - Two Player Scaling" maxlength="5" charcounter></mwc-textfield>
-                                    <mwc-textfield type="number" step=".01" min="0" class="w-100 mt-1" id="small-enemy-damage-resistance-3p" label="Small Enemy Damage Resistance - Three Player Scaling" maxlength="5" charcounter></mwc-textfield>
-                                    <mwc-textfield type="number" step=".01" min="0" class="w-100 mt-1" id="small-enemy-damage-resistance-4p" label="Small Enemy Damage Resistance - Four Player Scaling" maxlength="5" charcounter></mwc-textfield>
-                                    <mwc-textfield type="number" step=".01" min="0" class="w-100 mt-1" id="enemy-damage-modifier-1p" label="Enemy Damage Modifier - One Player Scaling" maxlength="5" charcounter required></mwc-textfield>
-                                    <mwc-textfield type="number" step=".01" min="0" class="w-100 mt-1" id="enemy-damage-modifier-2p" label="Enemy Damage Modifier - Two Player Scaling" maxlength="5" charcounter></mwc-textfield>
-                                    <mwc-textfield type="number" step=".01" min="0" class="w-100 mt-1" id="enemy-damage-modifier-3p" label="Enemy Damage Modifier - Three Player Scaling" maxlength="5" charcounter></mwc-textfield>
-                                    <mwc-textfield type="number" step=".01" min="0" class="w-100 mt-1" id="enemy-damage-modifier-4p" label="Enemy Damage Modifier - Four Player Scaling" maxlength="5" charcounter></mwc-textfield>
+                                    <div class="row">
+                                        <div class="col">
+                                            <h5 class="mt-5">Difficulty Setting:</h5>
+                                        </div>
+                                        <div class="col">
+                                            <!-- Scrollable modal example-->
+
+                                            <!-- Button that triggers the modal dialog-->
+                                            <button style="float: right; bottom: -36px;" class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#difficultySettingModal">Tooltips<i class="trailing-icon material-icons">launch</i></button>
+
+                                            <!-- Modal-->
+                                            <div class="modal fade" id="difficultySettingModal" tabindex="-1" aria-labelledby="difficultySettingModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog modal-dialog-scrollable">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="difficultySettingModalLabel">Difficulty Setting</h5>
+                                                            <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <p>Extra Large Enemy Damage Resistance: The variant without a letter suffix affects the damage of the 3 dreadnought variants. B affects Korlok Tyrant Weeds, C affects the OMEN tower, D affects Elite enemies. If you would like a static value regardless of player count, please just use the one player scaling option. If you want to scale by player count and use only up until the 2 or 3 player scaling, everything with 2+ and 3+ players will have the same scaling, respectively.</p>
+                                                            <p>Enemy Damage Resistance: This field determines the damage resistance of most larger enemies in the game. This includes creatures such as Praetorians, Oppressors, Menaces, Goo Bombers, and Bulk Detonators, among others. If you would like a static value regardless of player count, please just use the one player scaling option. If you want to scale by player count and use only up until the 2 or 3 player scaling, everything with 2+ and 3+ players will have the same scaling, respectively.</p>
+                                                            <p>Small Enemy Damage Resistance: This field determines the damage resistance of enemies not covered by the other two resistance fields. This includes creatures such as Grunts and Grunt veterans, Mactera and Mactera veterans, and swarmers, among others. If you would like a static value regardless of player count, please just use the one player scaling option. If you want to scale by player count and use only up until the 2 or 3 player scaling, everything with 2+ and 3+ players will have the same scaling, respectively.</p>
+                                                            <p>Enemy Damage Modifier: This field determines the amount of damage enemies will deal with ALL attacks. If you would like a static value regardless of player count, please just use the one player scaling option. If you want to scale by player count and use only up until the 2 or 3 player scaling, everything with 2+ and 3+ players will have the same scaling, respectively.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <mwc-textfield type="number" step=".01" min="0" max="99.99" class="w-100 mt-1" id="extra-large-enemy-damage-resistance-1p" label="Extra Large Enemy Damage Resistance - One Player Scaling" maxlength="5" charcounter required></mwc-textfield>
+                                    <mwc-textfield type="number" step=".01" min="0" max="99.99" class="w-100 mt-1" id="extra-large-enemy-damage-resistance-2p" label="Extra Large Enemy Damage Resistance - Two Player Scaling" maxlength="5" charcounter></mwc-textfield>
+                                    <mwc-textfield type="number" step=".01" min="0" max="99.99" class="w-100 mt-1" id="extra-large-enemy-damage-resistance-3p" label="Extra Large Enemy Damage Resistance - Three Player Scaling" maxlength="5" charcounter></mwc-textfield>
+                                    <mwc-textfield type="number" step=".01" min="0" max="99.99" class="w-100 mt-1" id="extra-large-enemy-damage-resistance-4p" label="Extra Large Enemy Damage Resistance - Four Player Scaling" maxlength="5" charcounter></mwc-textfield>
+                                    <mwc-textfield type="number" step=".01" min="0" max="99.99" class="w-100 mt-1" id="extra-large-enemy-damage-resistance-b-1p" label="Extra Large Enemy Damage Resistance B - One Player Scaling" maxlength="5" charcounter required></mwc-textfield>
+                                    <mwc-textfield type="number" step=".01" min="0" max="99.99" class="w-100 mt-1" id="extra-large-enemy-damage-resistance-b-2p" label="Extra Large Enemy Damage Resistance B - Two Player Scaling" maxlength="5" charcounter></mwc-textfield>
+                                    <mwc-textfield type="number" step=".01" min="0" max="99.99" class="w-100 mt-1" id="extra-large-enemy-damage-resistance-b-3p" label="Extra Large Enemy Damage Resistance B - Three Player Scaling" maxlength="5" charcounter></mwc-textfield>
+                                    <mwc-textfield type="number" step=".01" min="0" max="99.99" class="w-100 mt-1" id="extra-large-enemy-damage-resistance-b-4p" label="Extra Large Enemy Damage Resistance B - Four Player Scaling" maxlength="5" charcounter></mwc-textfield>
+                                    <mwc-textfield type="number" step=".01" min="0" max="99.99" class="w-100 mt-1" id="extra-large-enemy-damage-resistance-c-1p" label="Extra Large Enemy Damage Resistance C - One Player Scaling" maxlength="5" charcounter required></mwc-textfield>
+                                    <mwc-textfield type="number" step=".01" min="0" max="99.99" class="w-100 mt-1" id="extra-large-enemy-damage-resistance-c-2p" label="Extra Large Enemy Damage Resistance C - Two Player Scaling" maxlength="5" charcounter></mwc-textfield>
+                                    <mwc-textfield type="number" step=".01" min="0" max="99.99" class="w-100 mt-1" id="extra-large-enemy-damage-resistance-c-3p" label="Extra Large Enemy Damage Resistance C - Three Player Scaling" maxlength="5" charcounter></mwc-textfield>
+                                    <mwc-textfield type="number" step=".01" min="0" max="99.99" class="w-100 mt-1" id="extra-large-enemy-damage-resistance-c-4p" label="Extra Large Enemy Damage Resistance C - Four Player Scaling" maxlength="5" charcounter></mwc-textfield>
+                                    <mwc-textfield type="number" step=".01" min="0" max="99.99" class="w-100 mt-1" id="extra-large-enemy-damage-resistance-d-1p" label="Extra Large Enemy Damage Resistance D - One Player Scaling" maxlength="5" charcounter required></mwc-textfield>
+                                    <mwc-textfield type="number" step=".01" min="0" max="99.99" class="w-100 mt-1" id="extra-large-enemy-damage-resistance-d-2p" label="Extra Large Enemy Damage Resistance D - Two Player Scaling" maxlength="5" charcounter></mwc-textfield>
+                                    <mwc-textfield type="number" step=".01" min="0" max="99.99" class="w-100 mt-1" id="extra-large-enemy-damage-resistance-d-3p" label="Extra Large Enemy Damage Resistance D - Three Player Scaling" maxlength="5" charcounter></mwc-textfield>
+                                    <mwc-textfield type="number" step=".01" min="0" max="99.99" class="w-100 mt-1" id="extra-large-enemy-damage-resistance-d-4p" label="Extra Large Enemy Damage Resistance D - Four Player Scaling" maxlength="5" charcounter></mwc-textfield>
+                                    <mwc-textfield type="number" step=".01" min="0" max="99.99" class="w-100 mt-1" id="enemy-damage-resistance-1p" label="Enemy Damage Resistance - One Player Scaling" maxlength="5" charcounter required></mwc-textfield>
+                                    <mwc-textfield type="number" step=".01" min="0" max="99.99" class="w-100 mt-1" id="enemy-damage-resistance-2p" label="Enemy Damage Resistance - Two Player Scaling" maxlength="5" charcounter></mwc-textfield>
+                                    <mwc-textfield type="number" step=".01" min="0" max="99.99" class="w-100 mt-1" id="enemy-damage-resistance-3p" label="Enemy Damage Resistance - Three Player Scaling" maxlength="5" charcounter></mwc-textfield>
+                                    <mwc-textfield type="number" step=".01" min="0" max="99.99" class="w-100 mt-1" id="enemy-damage-resistance-4p" label="Enemy Damage Resistance - Four Player Scaling" maxlength="5" charcounter></mwc-textfield>
+                                    <mwc-textfield type="number" step=".01" min="0" max="99.99" class="w-100 mt-1" id="small-enemy-damage-resistance-1p" label="Small Enemy Damage Resistance - One Player Scaling" maxlength="5" charcounter required></mwc-textfield>
+                                    <mwc-textfield type="number" step=".01" min="0" max="99.99" class="w-100 mt-1" id="small-enemy-damage-resistance-2p" label="Small Enemy Damage Resistance - Two Player Scaling" maxlength="5" charcounter></mwc-textfield>
+                                    <mwc-textfield type="number" step=".01" min="0" max="99.99" class="w-100 mt-1" id="small-enemy-damage-resistance-3p" label="Small Enemy Damage Resistance - Three Player Scaling" maxlength="5" charcounter></mwc-textfield>
+                                    <mwc-textfield type="number" step=".01" min="0" max="99.99" class="w-100 mt-1" id="small-enemy-damage-resistance-4p" label="Small Enemy Damage Resistance - Four Player Scaling" maxlength="5" charcounter></mwc-textfield>
+                                    <mwc-textfield type="number" step=".01" min="0" max="99.99" class="w-100 mt-1" id="enemy-damage-modifier-1p" label="Enemy Damage Modifier - One Player Scaling" maxlength="5" charcounter required></mwc-textfield>
+                                    <mwc-textfield type="number" step=".01" min="0" max="99.99" class="w-100 mt-1" id="enemy-damage-modifier-2p" label="Enemy Damage Modifier - Two Player Scaling" maxlength="5" charcounter></mwc-textfield>
+                                    <mwc-textfield type="number" step=".01" min="0" max="99.99" class="w-100 mt-1" id="enemy-damage-modifier-3p" label="Enemy Damage Modifier - Three Player Scaling" maxlength="5" charcounter></mwc-textfield>
+                                    <mwc-textfield type="number" step=".01" min="0" max="99.99" class="w-100 mt-1" id="enemy-damage-modifier-4p" label="Enemy Damage Modifier - Four Player Scaling" maxlength="5" charcounter></mwc-textfield>
+                                </div>
+                                <div class="tab" id="encounter-difficulty-tab">
+                                    <div class="row">
+                                        <div class="col">
+                                            <h5 class="mt-5">Encounter Difficulty:</h5>
+                                        </div>
+                                        <div class="col">
+                                            <!-- Scrollable modal example-->
+
+                                            <!-- Button that triggers the modal dialog-->
+                                            <button style="float: right; bottom: -36px;" class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#encounterDifficultyModal">Tooltips<i class="trailing-icon material-icons">launch</i></button>
+
+                                            <!-- Modal-->
+                                            <div class="modal fade" id="encounterDifficultyModal" tabindex="-1" aria-labelledby="encounterDifficultyModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog modal-dialog-scrollable">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="encounterDifficultyModalLabel">Encounter Difficulty</h5>
+                                                            <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <p>This field determines how many enemies will spawn as “Encounter” spawns. An Encounter spawn spawns when a player comes within a certain distance of an unexplored room in a cave. These spawns will usually include Grunt packs, Praetorians, Mactera groups, etc. These spawns DO NOT include stationary enemies, which are: Spitballers, Brood Nexii, Breeders and Cave Leeches. These spawns DO NOT include special event enemies such as Crassus Detonators, Huuli Hoarders, or Prospectors. These spawns will spawn un-aggroed, meaning a player will have to approach them or fire at them before they will attempt to attack. Each bin can be weighted between 0 and 1, 0 being 0 percent, 1 being 100 percent. Then you can assign a minimum number of points to assign to the bin, as well as a maximum weight.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <button class="btn btn-danger hide" id="remove-encounter-difficulty-bin" type="button" style="float: right; bottom: -36px; margin-right: 4px;">Remove Bin</button>
+                                            <button class="btn btn-success" id="add-encounter-difficulty-bin" type="button" style="float:right; bottom: -36px; margin-right: 4px;">Add Bin</button>
+                                        </div>
+                                    </div>
+                                    <div class="row encounter-difficulty-bin-row">
+                                        <div class="col-4">
+                                            <mwc-textfield type="number" step=".01" min="0" max="1" class="w-100 mt-1" id="encounter-difficulty-weight-bin-1" label="Weight" maxlength="4" charcounter required></mwc-textfield>
+                                        </div>
+                                        <div class="col-4">
+                                            <mwc-textfield type="number" min="0" max="9999" class="w-100 mt-1" id="encounter-difficulty-min-bin-1" label="Min" maxlength="4" charcounter required></mwc-textfield>
+                                        </div>
+                                        <div class="col-4">
+                                            <mwc-textfield type="number" min="0" max="9999" class="w-100 mt-1" id="encounter-difficulty-max-bin-1" label="Max" maxlength="4" charcounter required></mwc-textfield>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div style="overflow:auto; margin-top: 30px;">
                                     <div style="float:right;">
@@ -184,6 +253,7 @@
                                     </div>
                                 </div>
                                 <div style="text-align:center;margin-top:40px;">
+                                    <span class="step"></span>
                                     <span class="step"></span>
                                     <span class="step"></span>
                                     <span class="step"></span>
@@ -218,7 +288,9 @@
         <script src="js/datatables/datatables-simple-demo.js"></script>
         <!-- Form Pagination -->
         <script src="js/formPagination.js"></script>
-        <!-- Mutators JS -->
+        <!-- Resupply Mutators JS -->
         <script src="js/resupplyMutators.js"></script>
+        <!-- Encounter Difficulty JS -->
+        <script src="js/encounterDifficulty.js"></script>
     </body>
 </html>

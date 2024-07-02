@@ -23801,3 +23801,11 @@ select:invalid, select:invalid ~ .validation {
 .step.active {
   opacity: 1;
 }
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
